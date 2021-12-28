@@ -1,0 +1,10 @@
+.nostyle{
+    text-decoration: none;
+}
+.center{
+    text-align:center;
+    vertical-align: center;
+}
+.center-element{
+    display: inline-block;
+}

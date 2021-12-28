@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        link(rel="stylesheet","href"="./css/index.css",type='text/css')
+        title #{title} books at Kitab Nepal ma
+    body
+        div(class="center")
+            h1(class="center-element") Kitab Nepal ma
+        h2 Search Page 
+        table
+            tr
+                th Title 
+                th Year 
+                th Pages 
+                th Author 
+                th Publication 
+                th edition
+                th cover
+            each val in result
+                tr 
+                    td= val.title 
+                    td=val.year 
+                    td=val.pages 
+                    td=val.author 
+                    td=val.publisher 
+                    td=val.edition
+                    td 
+                        img(src=`https://covers.openlibrary.org/b/isbn/${val.identifier.split(',')[0]}-S.jpg`)
+            
